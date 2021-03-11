@@ -21,7 +21,7 @@
 
   <groupId>me.snowdrop</groupId>
   <artifactId>istio-java-api</artifactId>
-  <version>1.7.5-Beta2</version>
+  <version>1.7.5-Beta2-ppd</version>
   <packaging>pom</packaging>
 
 
@@ -40,6 +40,19 @@
     <system>JIRA</system>
     <url>https://issues.jboss.org/projects/SB/summary</url>
   </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>ppdai-releases-repo</id>
+      <name>Internal Releases</name>
+      <url>http://maven.repo.ppdai.com/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ppdai-snapshots-repo</id>
+      <name>Internal Snapshots</name>
+      <url>http://maven.repo.ppdai.com/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <developers>
     <developer>
@@ -62,7 +75,7 @@
     <url>https://github.com/snowdrop/istio-java-api</url>
     <connection>scm:git:https://github.com/snowdrop/istio-java-api.git</connection>
     <developerConnection>scm:git:git@github.com:snowdrop/istio-java-api.git</developerConnection>
-    <tag>1.7.5-Beta2</tag>
+    <tag>1.7.5-Beta2-ppd</tag>
   </scm>
 
 
