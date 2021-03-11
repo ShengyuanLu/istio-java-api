@@ -6201,6 +6201,78 @@
       "additionalProperties": false,
       "javaType": "me.snowdrop.istio.api.networking.v1beta1.WorkloadEntrySpec"
     },
+
+    "istio_networking_v1alpha3_WorkloadGroup": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "metadata": {
+          "$ref": "#/definitions/istio_networking_v1alpha3_WorkloadGroup_ObjectMeta",
+          "javaType": "me.snowdrop.istio.api.networking.v1alpha3.ObjectMeta"
+        },
+        "template": {
+          "$ref": "#/definitions/istio_networking_v1alpha3_WorkloadEntry",
+          "javaType": "me.snowdrop.istio.api.networking.v1alpha3.WorkloadEntry"
+        },
+        "probe": {
+          "$ref": "#/definitions/istio_networking_v1alpha3_ReadinessProbe",
+          "javaType": "me.snowdrop.istio.api.networking.v1alpha3.ReadinessProbe"
+        }
+      },
+      "additionalProperties": false,
+      "javaType": "me.snowdrop.istio.api.networking.v1alpha3.WorkloadGroupSpec"
+    },
+
+    "istio_networking_v1alpha3_WorkloadGroup_ObjectMeta": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "labels": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "annotations": {
+          "description": "",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "javaType": "me.snowdrop.istio.api.networking.v1alpha3.ObjectMeta"
+    },
+
+    "istio_networking_v1alpha3_ReadinessProbe": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "initialDelaySeconds":{
+          "type": "integer",
+          "description": ""
+        },
+        "timeoutSeconds":{
+          "type": "integer",
+          "description": ""
+        },
+        "periodSeconds":{
+          "type": "integer",
+          "description": ""
+        },
+        "successThreshold":{
+          "type": "integer",
+          "description": ""
+        },
+        "failureThreshold":{
+          "type": "integer",
+          "description": ""
+        }
+      },
+      "javaType": "me.snowdrop.istio.networking.v1alpha3.ReadinessProbe"
+    },
+
     "istio_networking_v1beta1_WorkloadSelector": {
       "type": "object",
       "description": "",
@@ -7400,6 +7472,10 @@
     "v1Alpha3WorkloadEntry": {
       "$ref": "#/definitions/istio_networking_v1alpha3_WorkloadEntry",
       "javaType": "me.snowdrop.istio.api.networking.v1alpha3.WorkloadEntrySpec"
+    },
+    "v1Alpha3WorkloadGroup": {
+      "$ref": "#/definitions/istio_networking_v1alpha3_WorkloadGroup",
+      "javaType": "me.snowdrop.istio.api.networking.v1alpha3.WorkloadGroupSpec"
     },
     "vPortSelector": {
       "$ref": "#/definitions/istio_networking_v1beta1_PortSelector",
